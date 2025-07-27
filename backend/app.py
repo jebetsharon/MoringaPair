@@ -27,7 +27,7 @@ def create_app():
         app.config.from_object(DevelopmentConfig)
 
     # ✅ Enable CORS for frontend (React app on Vite dev server)
-    CORS(app, resources={r"/*": {"origins": ["http://localhost:5173", "http://127.0.0.1:5173"]}}, supports_credentials=True)
+    CORS(app, resources={r"/*": {"origins": ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"]}}, supports_credentials=True)
 
     # ✅ Initialize Flask extensions
     db.init_app(app)
